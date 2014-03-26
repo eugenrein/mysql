@@ -23,7 +23,7 @@ group :kitchen_cloud do
   gem 'kitchen-digitalocean'
   gem 'kitchen-ec2'
   gem 'kitchen-joyent'
-  gem 'kitchen-gce', :git => 'git://github.com/someara/kitchen-gce.git', :branch => 'authorized_ssh_keys'
+  gem 'kitchen-gce'
 end
 
 group :development do
