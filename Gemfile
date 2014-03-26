@@ -22,6 +22,8 @@ end
 group :kitchen_cloud do
   gem 'kitchen-digitalocean'
   gem 'kitchen-ec2'
+  gem 'kitchen-joyent'
+  gem 'kitchen-gce', :git => 'git://github.com/someara/kitchen-gce.git', :branch => 'authorized_ssh_keys'
 end
 
 group :development do
@@ -34,4 +36,6 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'rake'
+  gem 'fauxhai', :path => '/Users/someara/src/fauxhai'
+  gem 'pry-nav'
 end
