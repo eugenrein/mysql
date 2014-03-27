@@ -38,7 +38,7 @@ needed to run a simple mysql_service with a minimal configuration.
 ### Example
 
     mysql_service 'default' do
-      version '5.5'
+      version '5.1'
       port '3307'
       data_dir '/data'
       template_source 'custom.erb'
@@ -52,7 +52,7 @@ Available version numbers are `5.0`, `5.1`, `5.5`, and `5.6`,
 depending on platform. See PLATFORMS.md for details.
 
 The `port` parameter determines the listen port for the mysqld
-service. When omitted, it will default to '3307'.
+service. When omitted, it will default to '3306'.
 
 The `data_dir` parameter determines where the actual data files are
 kept on the machine. This is useful when mounting external storage.
