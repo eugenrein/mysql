@@ -1,8 +1,8 @@
-MySQL cookbook README
+MySQL cookbook
 =====================
 
 The MySQL cookbook exposes the `mysql_service` and `mysql_client`
-resources. These resources can be are utilized by the `mysql::client`
+resources. These resources are utilized by the `mysql::client`
 and `mysql::server` recipes, or can be consumed in other recipes by
 depending on the MySQL cookbook.
 
