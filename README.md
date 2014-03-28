@@ -81,7 +81,7 @@ This recipe calls a `mysql_client` resource, with action :create
 
 Usage
 -----
-The `mysql::server` recipe and `mysql_service` recipes are designed to
+The `mysql::server` recipe and `mysql_service` resources are designed to
 provide a minimal configuration. The default `my.cnf` dropped off has
 an `!includedir` directive. Site-specific configuration should be
 placed in the platform's native location.
