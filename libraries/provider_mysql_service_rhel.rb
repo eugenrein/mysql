@@ -22,6 +22,29 @@ class Chef::Provider::MysqlService::Rhel < Chef::Provider::MysqlService
         package_name = 'mysql-server'
         service_name = 'mysqld'
       end
+    when '2014'
+      case new_resource.version
+      when '5.1'
+        base_dir = ''
+        include_dir = "#{base_dir}/etc/mysql/conf.d"
+        prefix_dir = '/usr'
+        lc_messages_dir = nil
+        run_dir = '/var/run/mysqld'
+        pid_file = '/var/run/mysql/mysql.pid'
+        socket_file = '/var/lib/mysql/mysql.sock'
+        package_name = 'mysql-server'
+        service_name = 'mysqld'
+      when '5.5'
+        base_dir = ''
+        include_dir = "#{base_dir}/etc/mysql/conf.d"
+        prefix_dir = '/usr'
+        lc_messages_dir = nil
+        run_dir = '/var/run/mysqld'
+        pid_file = '/var/run/mysql/mysql.pid'
+        socket_file = '/var/lib/mysql/mysql.sock'
+        package_name = 'mysql-server'
+        service_name = 'mysqld'
+      end
     when '6'
       case new_resource.version
       when '5.1'
@@ -187,6 +210,13 @@ class Chef::Provider::MysqlService::Rhel < Chef::Provider::MysqlService
     when '2013'
       case new_resource.version
       when '5.1'
+        service_name = 'mysqld'
+      end
+    when '2014'
+      case new_resource.version
+      when '5.1'
+        service_name = 'mysqld'
+      when '5.5'
         service_name = 'mysqld'
       end
     when '6'

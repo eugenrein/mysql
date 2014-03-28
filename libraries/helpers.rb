@@ -54,9 +54,19 @@ module Opscode
               'default_version' => '5.1',
               '5.1' => 'mysql-server'
             },
+            '7' => {
+              'default_version' => '5.5',
+              '5.1' => 'mysql51-server',
+              '5.5' => 'mysql55-server'
+            },
             '2013.09' => {
               'default_version' => '5.1',
               '5.1' => 'mysql-server'
+            },
+            '2014.03' => {
+              'default_version' => '5.5',
+              '5.1' => 'mysql51-server',
+              '5.5' => 'mysql55-server'
             }
           },
           'fedora' => {

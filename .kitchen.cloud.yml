@@ -43,6 +43,13 @@ platforms:
     username: ec2-user
     ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
 
+- name: amazon-2014.03
+  driver_plugin: ec2
+  driver_config:
+    image_id: ami-6b726502
+    username: ec2-user
+    ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
+
 - name: fedora-19
   driver_plugin: digitalocean
   driver_config:
@@ -177,6 +184,7 @@ suites:
       'centos-5.8',
       'centos-6.4',
       'amazon-2013.09',
+      'amazon-2014.03',
       'ubuntu-10.04'
     ]
     attributes:
@@ -193,6 +201,7 @@ suites:
     - recipe[mysql_test_custom::server]
     includes: [
       'centos-5.8',
+      'amazon-2014.03',
       'fedora-19',
       'debian-7.0',
       'ubuntu-12.04',
@@ -209,6 +218,7 @@ suites:
     - recipe[mysql_test_custom::server]
     includes: [
       'centos-5.8',
+      'amazon-2014.03',
       'fedora-19',
       'debian-7.0',
       'ubuntu-12.04',
