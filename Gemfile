@@ -36,6 +36,6 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'rake'
-  gem 'fauxhai', :path => '/Users/someara/src/fauxhai'
+  gem 'fauxhai'
   gem 'pry-nav'
 end

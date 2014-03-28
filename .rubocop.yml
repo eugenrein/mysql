@@ -19,8 +19,5 @@ HashSyntax:
 Documentation:
   Enabled: false
 
-ClassAndModuleChildren:
-  Enabled: false
-
 CyclomaticComplexity:
   Max: 9

@@ -1,6 +1,10 @@
 require 'chef/provider'
 
-class Chef::Provider::MysqlClient < Chef::Provider::LWRPBase
-  def action_create
+class Chef
+  class Provider
+    class MysqlClient < Chef::Provider::LWRPBase
+      def action_create
+      end
+    end
   end
 end
