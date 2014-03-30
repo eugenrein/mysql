@@ -139,6 +139,12 @@ log_error = <%= node['mysql']['tunable']['log_error'] %>
 <%- if node['mysql']['tunable']['log_warnings'] %>
 log_warnings
 <%- end %>
+<%- if node['mysql']['tunable']['query_general_log'] %>
+general_log = <%= node['mysql']['tunable']['query_general_log'] %>
+<%- end %>
+<%- if node['mysql']['tunable']['query_general_log_file'] %>
+general_log_file = <%= node['mysql']['tunable']['query_general_log_file'] %>
+<%- end %>
 #
 # * Replication
 #
